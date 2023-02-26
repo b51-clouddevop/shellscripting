@@ -1,3 +1,7 @@
 #!/bin/bash
 echo "hello word"
 echo -e "line1 \n line2"
+#For a colored background, reset = 0, black = 40, red = 41, 
+#green = 42, yellow = 43, blue = 44, magenta = 45, cyan = 46, and white=47, 
+#are the commonly used color codes
+echo -e "\e[42m im printing some cloloure \e[0m"
