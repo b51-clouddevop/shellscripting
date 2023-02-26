@@ -1,3 +1,3 @@
 #!/bin/bash
 echo "hello word"
-echo "line1 \n line2"
+echo -e "line1 \n line2"
