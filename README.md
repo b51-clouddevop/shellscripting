@@ -12,3 +12,4 @@ git commit -m "msz" (commiting the changes to the local repository)
 git push      (to push changes to the remote repository)
 git pull    (to pull changes grom remote repository to local or server)
 ...
+in commits all histry saved
