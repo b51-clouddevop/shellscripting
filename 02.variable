@@ -4,5 +4,6 @@ a=10
 b=20
 echo "$a"
 echo "$b"
-echo "$c"
+echo "the value c is:$c"
+
 
