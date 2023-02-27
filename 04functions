@@ -1,4 +1,5 @@
 #!/bin/bash
-sample() {
-    echo "my first function"
+sample ( )
+{
+    echo "the first function"
 }
