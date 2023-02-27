@@ -6,6 +6,4 @@ echo "$a"
 echo "$b"
 echo "the value c is:$c"
 
-sample(){
-    echo "my first function"
-}
+
