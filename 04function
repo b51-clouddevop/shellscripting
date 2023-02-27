@@ -1,4 +1,0 @@
-#!/bin/bash
-sample() {
-    echo "1st function "
-}
