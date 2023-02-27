@@ -5,6 +5,3 @@ echo -e "line1 \n line2"
 #green = 42, yellow = 43, blue = 44, magenta = 45, cyan = 46, and white=47, 
 # are the commonly used color codes
 echo -e "\e[33m im printing some cloloure \e[0m"
-sample() {
-    echo "ist program"
-}
