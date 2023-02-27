@@ -7,5 +7,6 @@ stop)
 echo "stop the service" ;;
 
 *)
-echo "start and stop are the valid options"
+echo -e "\e[31m start and stop are the valid options e\[0m"
+
 esac
