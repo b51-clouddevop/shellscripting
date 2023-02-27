@@ -1,0 +1,11 @@
+#!/bin/bash
+ACTION=$1
+case $ACTION in
+start)
+echo "start the service";;
+stop)
+echo "stop the service" ;;
+
+*)
+echo "start and stop are the valid options"
+esac
