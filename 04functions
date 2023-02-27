@@ -1,5 +1,5 @@
 #!/bin/bash
-sample ( )
+sample()
 {
     echo "the first function"
 }
