@@ -1,5 +1,5 @@
 #!/bin/bash
-a="abcd"
+a="abc"
 if [ "$a"="abc" ]; then
 echo "true"
 else
