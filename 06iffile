@@ -1,7 +1,8 @@
 #!/bin/bash
 a="abcd"
-if [ "$a"=="abc" ]; then
+if  [ "$a" == "abc" ]; then
 echo "true"
 else
 echo "false"
+
 fi
