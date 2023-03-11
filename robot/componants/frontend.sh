@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "im frontend"
+yum install nginx -y
