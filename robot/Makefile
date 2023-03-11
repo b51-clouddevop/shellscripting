@@ -1,8 +1,8 @@
 frontend:
-bash	componants/frontend.sh
+bashcomponants/frontend.sh
 
 catalogue:
-bash	componants/catalogue.sh
+bashcomponants/catalogue.sh
 
 cart:
-bash	componants/cart.sh
+bashcomponants/cart.sh
