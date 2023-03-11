@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "im payment
-"
+echo "im payment"
