@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "im catalogue
-"
+echo "im catalogue"
