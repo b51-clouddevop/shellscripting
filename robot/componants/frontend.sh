@@ -1,3 +1,2 @@
 #!/bin/bash
-echo "im front end
-"
+echo "im front end"
