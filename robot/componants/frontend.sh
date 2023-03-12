@@ -5,21 +5,21 @@ if [ $USERID -ne 0 ] ; then
     echo -e "\e[31m you must run this script as a root user \e[0m"
     exit 1
     fi
-echo "installing nginx"
+echo -n "installing nginx"
    if [ $? -eq 0 ]  ; then
     echo -e "\e[32m succefull \e[0"
     else 
     echo -e "\e[31m failure \e[0"
    fi
 yum install nginx -y &>> /tmp/frontend.log
-echo "downloading"
+echo -n "downloading"
  if [ $? -eq 0 ]  ; then
     echo -e "\e[32m succefull \e[0"
     else 
     echo -e "\e[31m failure \e[0"
  fi
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
-   echo "cleaning junks"
+   echo -n "cleaning junks"
    if [ $? -eq 0 ]  ; then
    echo -e "\e[32m succefull \e[0"
     else 
