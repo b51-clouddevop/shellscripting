@@ -20,7 +20,7 @@ fi
 echo -n "installing nginx:"
 stat $?
 
-yum install ginx -y &>> $LOGFILE
+yum install nginx -y &>> $LOGFILE
 echo -n "downloading:"
  stat $?
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/$COMPONENTS/archive/main.zip"
@@ -29,7 +29,7 @@ stat $?
 
 rm -rf /usr/share/nginx/html/* &>> $LOGFILE
 cd /usr/share/nginx/html
-unzip /tmp/$COMPONENTSend.zip &>> $LOGFILE
+unzip /tmp/$COMPONENTS.zip &>> $LOGFILE
 mv frontend-main/* .
 mv static/* .
 rm -rf $COMPONENTS-main README.md
