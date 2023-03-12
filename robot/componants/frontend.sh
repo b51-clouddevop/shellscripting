@@ -33,7 +33,9 @@ unzip /tmp/$COMPONENTSend.zip &>> $LOGFILE
 mv frontend-main/* .
 mv static/* .
 rm -rf $COMPONENTS-main README.md
+echo "configuring reverse proxyfile"
+stat $?
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
- 
+ echo "service start"
 systemctl enable nginx
 systemctl start nginx
