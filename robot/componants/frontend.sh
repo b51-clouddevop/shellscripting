@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
+
 USERID=$(id -u)
-if[ $USERID -ne 0 ]; then
+if[ $USERID -ne 0 ] ; then
     echo -e "\e[31m you must run this script as a root user \e[0m"
     exit 1
     fi
