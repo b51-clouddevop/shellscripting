@@ -20,7 +20,7 @@ fi
 echo -n "installing nginx:"
 stat $?
 
-yum install nginx -y &>> $LOGFILE
+yum install ginx -y &>> $LOGFILE
 echo -n "downloading:"
  stat $?
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/$COMPONENTS/archive/main.zip"
