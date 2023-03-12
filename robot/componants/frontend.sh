@@ -6,12 +6,12 @@ if [ $USERID -ne 0 ] ; then
     echo -e "\e[31m you must run this script as a root user \e[0m"
     exit 1
     fi
-yum install nginx -y &>> /temp/frontend.log
+yum install nginx -y &>> /tmp/frontend.log
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
 
-rm -rf /usr/share/nginx/html/* &>> /temp/frontend.log
+rm -rf /usr/share/nginx/html/* &>> /tmp/frontend.log
 cd /usr/share/nginx/html
-unzip /tmp/frontend.zip &>> /temp/frontend.log
+unzip /tmp/frontend.zip &>> /tmp/frontend.log
 mv frontend-main/* .
 mv static/* .
 rm -rf frontend-main README.md
