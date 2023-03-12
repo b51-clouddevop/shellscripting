@@ -7,10 +7,25 @@ if [ $USERID -ne 0 ] ; then
     exit 1
     fi
 echo "installing nginx"
+if [ $? -eq 0 ]  ; then
+echo -e "\e[32m succefull \e[0"
+else 
+echo -e "\e[31m failure \e[0"
+fi
 yum install nginx -y &>> /tmp/frontend.log
 echo "downloading"
+if [ $? -eq 0 ]  ; then
+echo -e "\e[32m succefull \e[0"
+else 
+echo -e "\e[31m failure \e[0"
+fi
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
 echo "cleaning junks"
+if [ $? -eq 0 ]  ; then
+echo -e "\e[32m succefull \e[0"
+else 
+echo -e "\e[31m failure \e[0"
+fi
 rm -rf /usr/share/nginx/html/* &>> /tmp/frontend.log
 cd /usr/share/nginx/html
 unzip /tmp/frontend.zip &>> /tmp/frontend.log
