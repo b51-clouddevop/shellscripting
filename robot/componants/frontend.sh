@@ -2,6 +2,8 @@
 set -e
 
 USERID=$(id -u)
+COMPONENTS=frontend
+LOGFILE=/tmp/$COMPONENTS.log
 
 if [ $USERID -ne 0 ] ; then
 echo -e "\e[31m you must run this script as a root user \e[0m"
@@ -18,19 +20,19 @@ fi
 echo -n "installing nginx:"
 stat $?
 
-yum install nginx -y &>> /tmp/frontend.log
+yum install nginx -y &>> $LOGFILE
 echo -n "downloading:"
  stat $?
-curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
+curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/$COMPONENTS/archive/main.zip"
 echo -n "cleaning junks:"
 stat $?
 
-rm -rf /usr/share/nginx/html/* &>> /tmp/frontend.log
+rm -rf /usr/share/nginx/html/* &>> $LOGFILE
 cd /usr/share/nginx/html
-unzip /tmp/frontend.zip &>> /tmp/frontend.log
+unzip /tmp/$COMPONENTSend.zip &>> $LOGFILE
 mv frontend-main/* .
 mv static/* .
-rm -rf frontend-main README.md
+rm -rf $COMPONENTS-main README.md
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
  
 systemctl enable nginx
