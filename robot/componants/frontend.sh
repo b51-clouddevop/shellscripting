@@ -1,19 +1,19 @@
 #!/bin/bash
 set -e
-COMPONENTS=frontend
+COMPONENT=frontend
 source componants/common.sh
 
 echo -n "installing nginx:"
-stat $?
 
 yum install nginx -y &>> $LOGFILE
-echo -n "downloading:"
- stat $?
-curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/$COMPONENTS/archive/main.zip"
-echo -n "cleaning junks:"
 stat $?
+echo -n "downloading:"
+curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/$COMPONENTS/archive/main.zip"
+ stat $?
+echo -n "cleaning junks:"
 
 rm -rf /usr/share/nginx/html/* &>> $LOGFILE
+stat $?
 cd /usr/share/nginx/html
 unzip /tmp/$COMPONENTS.zip &>> $LOGFILE
 mv frontend-main/* .
