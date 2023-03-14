@@ -1,2 +1,6 @@
 #!/bin/bash
-echo "im mangodb"
+set -e
+
+COMPONENTS=mongodb
+
+source componants/common.sh
