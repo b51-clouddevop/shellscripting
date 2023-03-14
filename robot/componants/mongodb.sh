@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
-COMPONENTS=mongodb
+COMPONENT=mongodb
 source componants/common.sh
 echo"confinguring repo:"
-curl -s -o /etc/yum.repos.d/$COMPONENTS.repo https://raw.githubusercontent.com/stans-robot-project/$COMPONENTS/main/mongo.repo
+curl -s -o /etc/yum.repos.d/${COMPONENT}.repo https://raw.githubusercontent.com/stans-robot-project/${COMPONENT}/main/mongo.repo
 stat $?
 
 echo "installing mangodb:"
