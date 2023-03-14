@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 COMPONENTS=frontend
+source componants/common.sh
 
 echo -n "installing nginx:"
 stat $?
