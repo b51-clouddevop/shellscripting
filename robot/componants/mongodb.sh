@@ -19,13 +19,13 @@ echo -n "starting mongodb serive: "
 stat $?
 
 echo -n "downloding schema: "
-     curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/mongodb/archive/main.zip" &>> $LOGFILE
+     curl -s -L -o /tmp/mongodb.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip" &>> $LOGFILE
      stat $?
 
 echo -n "injecting the schema: "
      cd /tmp
-     unzip -o mongodb.zip  
+     unzip -o mongodb.zip  &>> $LOGFILE
      cd mongodb-main
-     mongo < catalogue.js
-     mongo < users.js
+     mongo < catalogue.js &>> $LOGFILE
+     mongo < users.js     &>> $LOGFILE
  stat $?        
