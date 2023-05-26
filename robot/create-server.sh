@@ -17,4 +17,4 @@ PRIVATE_IP=$(aws ec2 run-instances --image-id $AMI_ID --instance-type t2.micro -
 sed -e "s/IPADDRESS/${PRIVATE_IP}/" -e "s/COMPONENT/$COMPONENT/" route53.json > /tmp/dns.json
 
 echo -n "creating DNS record ********"
-aws route53 change-resource-record-sets --hosted-zone-id Z0661428284PH7J9I27TJ --change-batch file://tmp/dns.json | jq
+aws route53 change-resource-record-sets --hosted-zone-id Z0661428284PH7J9I27TJ --change-batch file:///tmp/dns.json | jq
