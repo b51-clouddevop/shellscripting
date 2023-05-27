@@ -1,5 +1,0 @@
--name: configure the roboshop
- host: frontend
- become: yes
- roles:
-   - frontend
